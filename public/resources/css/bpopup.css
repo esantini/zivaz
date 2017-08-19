@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+#element_to_pop_up { 
+    display:none; 
+    background: url(../images/background.png);
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px #292929;
+}
+
+.b-close{
+	cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
