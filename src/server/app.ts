@@ -18,18 +18,22 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/$', function(req: express.Request, res: express.Response, next: express.NextFunction) {
+	console.log("\nServing: home");
 	res.render('index', { page: "home" });
 });
 
 app.use('/menu$', function(req: express.Request, res: express.Response, next: express.NextFunction) {
+	console.log("\nServing: menu");
 	res.render('index', { page: "menu" });
 });
 
 app.use('/aboutus$', function(req: express.Request, res: express.Response, next: express.NextFunction) {
+	console.log("\nServing: aboutus");
 	res.render('index', { page: "aboutus" });
 });
 
 app.use('/catering$', function(req: express.Request, res: express.Response, next: express.NextFunction) {
+	console.log("\nServing: catering");
 	res.render('index', { page: "catering" });
 });
 
