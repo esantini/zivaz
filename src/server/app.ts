@@ -53,11 +53,11 @@ app.use(function(err: myError, req:express.Request, res:express.Response, next: 
 
 	// render the error page
 	res.status(err.status || 500);
-	res.render('error');
+	res.render('error', { page: "error", error: err.message });
 });
 
 app.listen(port);
-console.log("TADAA!");
+console.log("TADAA ! ! ! \n");
 
 // import * as httpLib from 'http';
 // /**
