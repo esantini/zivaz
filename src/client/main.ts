@@ -1,23 +1,23 @@
 
-var headerHeight;
+var headerHeight: number;
 
 function repositionHeader(){
-	if ($(window).scrollTop() > headerHeight + 7) {
-        $('#scroller').css('top', $(window).scrollTop() - headerHeight - 7);
+	if ($(window).scrollTop()! > headerHeight + 7) {
+        $('#scroller').css('top', $(window).scrollTop()! - headerHeight - 7);
     } else {
     	$('#scroller').css('top', 0);
     }
 };
 
-$(window).load(function(){
+$(window).load((function() {
 	if($('#header').length){
 		setHeaderHeight();
 	} else {
 		headerHeight = 0;
 	}
 	repositionHeader();
-	$('#headerImg').css('max-width', $(window).width() - 10);
-});
+	$('#headerImg').css('max-width', $(window).width()! - 10);
+} as any));
 
 $(window).scroll(function () {
     repositionHeader();
@@ -30,18 +30,18 @@ $(window).resize(function () {
 		headerHeight = 0;
 	}
 	repositionHeader();
-	$('#headerImg').css('max-width', $(window).width() - 10);
+	$('#headerImg').css('max-width', $(window).width()! - 10);
 });
 
 function setHeaderHeight(){
-	headerHeight = $('#header').height() - 1;
+	headerHeight = $('#header').height()! - 1;
 };
 
 /*
 Developed by Robert Nyman, http://www.robertnyman.com
 Code/licensing: http://code.google.com/p/getelementsbyclassname/
 */	
-var getElementsByClassName = function (className, tag, elm){
+var getElementsByClassName = function (className: any, tag: any, elm: any): any{
 	if (document.getElementsByClassName) {
 		getElementsByClassName = function (className, tag, elm) {
 			elm = elm || document;
@@ -73,7 +73,7 @@ var getElementsByClassName = function (className, tag, elm){
 				classesToCheck += "[contains(concat(' ', @class, ' '), ' " + classes[j] + " ')]";
 			}
 			try	{
-				elements = document.evaluate(".//" + tag + classesToCheck, elm, namespaceResolver, 0, null);
+				elements = document.evaluate(".//" + tag + classesToCheck, elm, (namespaceResolver as any), 0, null);
 			}
 			catch (e) {
 				elements = document.evaluate(".//" + tag + classesToCheck, elm, null, 0, null);
