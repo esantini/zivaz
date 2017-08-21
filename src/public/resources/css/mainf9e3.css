@@ -152,24 +152,27 @@ input {
 	color: rgb(232, 171, 109);
 }
 
+/*  ABOUT US  */
+@media (min-width: 1200px) {
+	.aboutUsCell {
+		min-height: 415px !important;
+	}
+}
 
+@media (max-width: 1199px) {
+	.aboutUsCell {
+		min-height: 345px !important;
+	}
+}
 
+@media (max-width: 991px) {
+	.aboutUsCell {
+		min-height: 265px !important;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 767px) {
+	.aboutUsCell {
+		min-height: 1px !important;
+	}
+}
