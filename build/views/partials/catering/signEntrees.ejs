@@ -155,7 +155,7 @@
 
 						<h3 style="display:inline-block">
 							<label class="menuItemTitle">
-								Calamari
+								Pollo Rajas
 							</label>
 						</h3>
 
@@ -165,15 +165,15 @@
 					</div>
 
 					<div class="menuItemSummary">
-						<p>
-							Tasty panko breaded crispy calamari strips, served with chipotle aioli sauce </p>
 						<ul>
 							<li>
 								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
 									<tbody>
 										<tr>
-											<td>Price per dozen</td>
-											<td>11</td>
+											<td>
+												Grilled chicken in green poblano sauce with cheese & veggies
+											</td>
+											<td>9.95</td>
 										</tr>
 									</tbody>
 								</table>
@@ -316,3 +316,7 @@
 
 	</div>
 </div>
+
+<% if( process.env.DEV_ENV ) { %>
+<script>showmenuContentSE();</script>
+<% } %>
