@@ -1,0 +1,771 @@
+@CHARSET "ISO-8859-1";
+
+/*
+@font-face { font-family: mainFontRegular; src: url('fonts/Dosis-Medium.ttf'); }
+@font-face { font-family: menuCategory; src: url('fonts/SEASRN__.ttf'); }
+@font-face { font-family: menuCategoryDesc; src: url('fonts/OpenSans-Semibold.ttf'); }
+@font-face { font-family: menuItemTitle; src: url('fonts/Bitter-BoldItalic.otf'); }
+*/
+
+@font-face {
+  font-family: 'mainFontRegular';
+  src: url('fonts/Dosis-Medium.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Dosis-Mediumd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Dosis-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Dosis-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Dosis-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Dosis-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'menuCategory';
+  src: url('fonts/SEASRN__.eot'); /* IE9 Compat Modes */
+  src: url('fonts/SEASRN__d41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/menuCategory/seasrn__-webfont.woff2') format('woff2'),   /* Super Modern Browsers  */
+       url('fonts/menuCategory/seasrn__-webfont.woff') format('woff'),     /* Pretty Modern Browsers */
+       url('fonts/menuCategory/seasrn__-webfont.ttf')  format('truetype'), /* Safari, Android, iOS   */
+       url('fonts/SEASRN__.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'menuCategoryDesc';
+  src: url('fonts/OpenSans-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/OpenSans-Semiboldd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/OpenSans-Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/OpenSans-Semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/OpenSans-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/OpenSans-Semibold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'menuItemTitle';
+  src: url('fonts/Bitter-BoldItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Bitter-BoldItalicd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Bitter-BoldItalic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Bitter-BoldItalic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Bitter-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Bitter-BoldItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+	background: url(../images/background.png);
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+html, body {
+    
+	font-family: "mainFontRegular", Helvetica, sans-serif ;
+	font-size: 18px;
+	color: white;
+	
+}
+
+/*
+h1, h2, h3 {
+	font-weight: bold;
+}*/
+
+#header {
+	
+	white-space: nowrap;
+	position: relative;
+	height: 180px;
+	overflow: hidden;
+}
+
+
+#headerLogo {
+	position: absolute;
+	top: 20px;
+	left: 0%;
+	width: 300px;
+}
+
+#headerRandomImage {
+	position: absolute;
+	right: 0;
+	height: 135px;
+	top: 0px;
+}
+
+#headerSlogan {
+	font-family: "headerSlogan";
+	color: white;
+}
+#headerMenu {
+	height: 45px;
+    position: relative;
+    top: 50px;
+    left: 300px;
+	
+}
+
+#headerMenu p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+#headerMenu a {
+	position:relative;
+	margin-left: 20px;
+
+	padding-left: 5px;
+	padding-right: 5px;
+		
+	color:white;
+	font-size: 1.5em;
+}
+#headerMenu a.active {
+	font-weight: bold;
+}
+#headerMenu a:hover,
+#headerMenu a.active  {
+	text-decoration: none;
+}
+
+#headerMenu a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	-webkit-transition: top 0.3s;
+	-moz-transition: top 0.3s;
+	transition: top 0.3s;
+}
+#headerMenu a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 2px;
+	background: #fff;
+	content: '';
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+#headerMenu a:hover::before,
+#headerMenu a.active::before  {
+	top:100%;
+	opacity: 1;
+}
+#headerMenu a:hover::after,
+#headerMenu a.active::after {
+	height: 100%;
+}
+
+
+
+@media (max-width: 991px) {
+	
+	#headerMenu {
+		left: 205px;
+	}
+	#headerLogo {
+		width: 240px;
+	}
+}
+
+@media (max-width: 767px) {
+	
+	#headerMenu a {
+		font-size: 1.3em;
+	}
+}
+@media (max-width: 720px) {
+	
+	#headerMenu {
+		left: 20px;
+		top: 120px;
+	}
+}
+@media (max-width: 450px) {
+	
+	#headerRandomImage{
+		max-height: 120px;
+	}
+	
+}
+@media (max-width: 370px) {
+	#headerMenu {
+		left: 0px;
+	}
+	#headerMenu a {
+		margin-left: 0px;
+	}
+	#headerRandomImage{
+		display: none;
+	}
+	#header {
+		overflow: inherit;
+	}
+}
+
+
+/* Image Slider Begins */
+
+	.imageSlider{
+		position: relative;
+		width:80%;
+		margin:auto;
+	}
+	.imageSlider:before{
+		content: "";
+		display: block;
+		padding-top: 50%;
+	}
+	.sliderContent{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+	#slider, 
+	.slider-wrapper,
+	.ribbon {
+		max-height: 100%;
+	}
+
+/* Image Slider Ends */
+
+
+
+
+#mainContainer {
+}
+
+#footer {
+	
+	position: relative;
+	text-align: center;
+	
+	overflow: hidden;
+	
+	color:white;
+	text-shadow: 
+		0 0 2px black,
+		0 0 2px black,
+		0 0 2px black;
+	display: inline-block;
+	width: 100%;
+}
+.footerTitle {
+	font-family: 'menuCategoryDesc';
+}
+
+#footerRight a{
+	color:white; 
+	text-decoration: underline;
+}
+
+#footer p {
+	font-size: 12px;
+}
+#footer .address {
+	cursor: hand; 
+	cursor: pointer;
+}
+#footer .address p,
+#footer .schedule p {
+	font-size: 1.1em;
+}
+#footer .schedule p, 
+#footer .address p {
+	margin-bottom: 1px;
+}
+#footer .address {
+	margin-top: 20px;
+}
+#footer .schedule {
+	margin-top: 15px;
+}
+
+#wrap {
+	margin: 0 auto -140px; !important
+}
+
+#scroller {
+	z-index: 999;
+}
+
+#contentContainer {
+	
+}
+#contentContainer a {
+	color:white;
+}
+#contentContainer .btn {
+	color:black;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+#carousel-arrow-right,
+#carousel-arrow-left
+{
+	position: absolute;
+	top:50%;
+	margin-top: -48px;
+}
+
+/*
+#myCarouselCaptions, .carousel-caption{
+	position: absolute;
+	top: 125px;
+	left: 50%;
+	margin-left: -340px;
+	
+	width: 300px;
+	max-width: 300px;
+	height: 200px;
+    
+    z-index: 999; 
+}
+
+.captionsBackground {
+	background: url(../images/cuadro.png);
+    background-color: black;
+	background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+*/
+
+.carouselSlider-size img.tall {
+	width: 100%;
+	height: auto !important;
+	vertical-align: middle;
+}
+.carouselSlider-size img.wide {
+	width: auto;
+	
+}
+.carouselSlider-size img.small {
+	
+}
+.carousel-control.left {
+	background-image: -webkit-linear-gradient(left,rgba(255,128,5,1) 0,rgba(255,128,5,.0001) 100%);
+	background-image: -o-linear-gradient(left,rgba(255,128,5,1) 0,rgba(255,128,5,.0001) 100%);
+	background-image: -webkit-gradient(linear,left top,right top,from(rgba(255,128,5,1)),to(rgba(255,128,5,.0001)));
+	background-image: linear-gradient(to right,rgba(255,128,5,1) 0,rgba(255,128,5,.0001) 100%);
+	opacity: 1;
+}
+.carousel-control.left:hover {
+	
+	background: -moz-linear-gradient(left,  rgba(255,128,5,1) 0, rgba(255,128,5,0.5) 60%, rgba(255,128,5,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0,rgba(255,128,5,1)), color-stop(60%,rgba(255,128,5,0.5)), color-stop(100%,rgba(255,128,5,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,128,5,1) 0,rgba(255,128,5,0.5) 60%,rgba(255,128,5,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,128,5,1) 0,rgba(255,128,5,0.5) 60%,rgba(255,128,5,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,128,5,1) 0,rgba(255,128,5,0.5) 60%,rgba(255,128,5,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,128,5,1) 0,rgba(255,128,5,0.5) 60%,rgba(255,128,5,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8005', endColorstr='#00ff8005',GradientType=1 ); /* IE6-9 */
+	
+	opacity: 1;
+}
+.carousel-control.right {
+	background-image: -webkit-linear-gradient(left,rgba(255,128,5,.0001) 0,rgba(255,128,5,1) 100%);
+	background-image: -o-linear-gradient(left,rgba(255,128,5,.0001) 0,rgba(255,128,5,1) 100%);
+	background-image: -webkit-gradient(linear,left top,right top,from(rgba(255,128,5,.0001)),to(rgba(255,128,5,1)));
+	background-image: linear-gradient(to right,rgba(255,128,5,.0001) 0,rgba(255,128,5,1) 100%);
+	opacity: 1;
+}
+.carousel-control.right:hover {
+	
+	background: -moz-linear-gradient(left,  rgba(255,128,5,0) 0, rgba(255,128,5,0) 0%, rgba(255,128,5,0.5) 40%, rgba(255,128,5,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0,rgba(255,128,5,0)), color-stop(0%,rgba(255,128,5,0)), color-stop(40%,rgba(255,128,5,0.5)), color-stop(100%,rgba(255,128,5,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,128,5,0) 0,rgba(255,128,5,0) 0%,rgba(255,128,5,0.5) 40%,rgba(255,128,5,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,128,5,0) 0,rgba(255,128,5,0) 0%,rgba(255,128,5,0.5) 40%,rgba(255,128,5,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,128,5,0) 0,rgba(255,128,5,0) 0%,rgba(255,128,5,0.5) 40%,rgba(255,128,5,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,128,5,0) 0,rgba(255,128,5,0) 0%,rgba(255,128,5,0.5) 40%,rgba(255,128,5,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff8005', endColorstr='#ff8005',GradientType=1 ); /* IE6-9 */
+	
+	opacity: 1;
+}
+
+.carouselSlider-size {
+	background-color: black;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:600px;
+}
+
+
+
+#wrap .carousel-inner .item {
+	margin-top: -10px;
+}
+
+
+
+
+.carousel-inner {
+	
+	background: -moz-linear-gradient(left,  rgba(255,128,5,1) 0%, rgba(255,128,5,0) 25%, rgba(255,128,5,0) 50%, rgba(255,128,5,0) 75%, rgba(255,128,5,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,128,5,1)), color-stop(25%,rgba(255,128,5,0)), color-stop(50%,rgba(255,128,5,0)), color-stop(75%,rgba(255,128,5,0)), color-stop(100%,rgba(255,128,5,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,128,5,1) 0%,rgba(255,128,5,0) 25%,rgba(255,128,5,0) 50%,rgba(255,128,5,0) 75%,rgba(255,128,5,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,128,5,1) 0%,rgba(255,128,5,0) 25%,rgba(255,128,5,0) 50%,rgba(255,128,5,0) 75%,rgba(255,128,5,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,128,5,1) 0%,rgba(255,128,5,0) 25%,rgba(255,128,5,0) 50%,rgba(255,128,5,0) 75%,rgba(255,128,5,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,128,5,1) 0%,rgba(255,128,5,0) 25%,rgba(255,128,5,0) 50%,rgba(255,128,5,0) 75%,rgba(255,128,5,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8005', endColorstr='#ff8005',GradientType=1 ); /* IE6-9 */
+}
+
+#carouselIFrame, 
+#carouselIFrame .carousel-inner,
+.popupMenuCarousel, 
+.popupMenuCarousel iframe
+{
+	width: 700px;
+	height: 450px;
+}
+.carouselIFrameImage {
+	max-width: 700px;
+	max-height: 450px;
+	width: auto;
+	height: auto;
+}
+
+#menuMain {
+	/*
+	width:760px;
+	*/
+	
+}
+
+.menuContent {
+	display: none;
+}
+.menuContent h3 {
+	font-family: serif;
+	font-weight: bold;
+	text-shadow: 0px 1px black;
+	margin-top: -15px;
+}
+
+#menuContainerTop {
+	width: 100%;
+}
+#menuContainerMiddle {
+	position:relative; 
+/*	background: url(../images/menuBgContainer1.jpg );*/
+	background-size: 100% auto;
+	margin-bottom: 20px;
+	
+	padding-top: 40px;
+	padding-right: 50px;
+	padding-bottom: 40px;
+	padding-left: 35px;
+	
+	
+}
+#menuContainerMiddle h2 {
+	
+	margin: 0px;
+	text-shadow: 
+		0px 0px 1px black;
+}
+
+.categoryTitle {
+	font-family: "menuCategory", Arial, Helvetica, sans-serif;
+	opacity: 0;
+}
+.menuCategoryDesc {
+	font-family: "menuCategoryDesc";
+	font-size: 15px !important;
+	margin-left: 20px;
+}
+
+.menuItemTitle {
+	margin-top: 15px;
+	font-family: "menuItemTitle";
+	color: #e3be39;
+}
+.menuItemTitle.sub{
+	font-size: .8em;
+	margin-top: 0;
+}
+
+.appetizers .menuItemTitle,
+.asadaBurger .menuItemTitle {
+	color: #b6c141;
+}
+.sopas .menuItemTitle,
+.mexicanFlavors .menuItemTitle {
+	color: #e3be39; 
+}
+.fondaKitchen .menuItemTitle {
+	color: #cc7331;	
+}
+.margaritas .menuItemTitle {
+	color: #d73378;
+}
+
+#menuContainerMiddle p,
+#menuContainerMiddle table {
+	font-size: 20px;
+}
+
+#menuLabels {
+	margin-top: 30px;
+	font-family: "menuItemTitle";
+	max-width:100%;
+	height: auto;
+	
+	opacity: 0;
+}
+.menuLabel {
+	max-height: 28px;
+	width: auto;
+	display: inline-block;
+}
+#menuLabels .col-sm-4 {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+
+.menuImg {
+	max-width: 600px;
+	height: auto;
+}
+.menuImagesLink {
+	position: relative;
+	top: -15px;
+	cursor: pointer; 
+}
+
+
+
+
+#loadingText {
+	margin-left: 45%;
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+/* loading animation: */ 
+#spinningSquaresG {
+	left: 50%;
+	margin-left: -120px;
+	margin-bottom: 80px;
+}
+
+.showHideLink {
+	padding-top: 20px;
+}
+.showHideLink label {
+	font-weight: 500;
+	display: inline;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+a.myTooltip img {
+	max-height: 28px;
+	width: auto;
+}
+
+.menuItemTitleDiv {
+	position:relative; 
+	display:inline-block;"
+}
+
+.menuItemTitleDiv .myTooltip .tooltipInfo {
+    left: 15px;
+	top: -8px;
+    width:180px; 
+    font-family: "menuItemTitle";
+}
+.menuItem {
+	padding-right: 30px; /* To avoid overlapping with best/winner/recommend */
+	margin-bottom: 20px;
+}
+.menuContent img {
+	height: auto;
+}
+.menuItem p{
+	margin: 0;
+}
+.menuItem div {
+	max-width:318px;
+}
+
+.menuItemSummary {
+	min-width: 250px;
+}
+
+
+.filling table p, 
+.filling table table td {
+	font-size: .9em !important;
+	margin-top: -3px;
+}
+.filling .menuItemSummary > table {
+	position: relative;
+	left: 0px;
+}
+.filling .menuItem div {
+	max-width: 400px;
+}
+.filling .menuItem td:first-child {
+	
+}
+.filling .menuItem table {
+	margin-top: 10px;
+}
+.filling .menuItem img {
+	
+}
+.filling .menuItem td h3 {
+	font-family: inherit;
+	color: #cc7331;
+}
+.filling .menuItem {
+	padding-right: 0;
+	margin-right: -15px;
+} 
+.filling {
+	padding: 0;
+}
+.filling td p {
+	white-space: nowrap;
+}
+
+
+.angus {
+	line-height: 1.1em;
+}
+
+.menuItemStatusImage {
+	position: absolute;
+	width: 120px;
+	height: auto;
+	top: -14px;
+	left: -77px;
+}
+
+.menuItemContent {
+	margin-top: 30px;
+}
+/* BEGIN: Line after each Category Title */
+	@media (min-width: 650px) {
+		.menuCategory{
+			max-width: 80%;
+		}
+		.categoryTitle div {
+			max-width: 100%;
+			overflow: hidden;
+		}
+		.categoryTitle h2:after {
+			content: "  ______________________________________________________";
+		}
+		.categoryTitle h2 {
+			white-space: nowrap;
+		}
+	}
+/* END: Line after each category Title */
+
+
+/* BEGIN: For the Leader Dot = dotted line before each price. */
+	.menuItem ul li {
+		display: table;
+		width: 100%;
+	}
+	.menuItem ul li td:first-child {
+	  position: relative;
+		overflow: hidden;            /* Don't go underneath the price */
+	}
+	.menuItem ul li td:first-child:after { /* dashes */
+		content:        "";
+		position:       absolute;
+		bottom:         0.3em;       /* Set as you want */       
+		margin-left:    0.5em;       /* Keep same for the next span's left padding */
+		width:          100%;
+		border-bottom:  2px dashed;
+	}
+	.menuItem ul li td + td {
+		text-align:     right;
+		width:          1%;          /* Trick it */
+		vertical-align: bottom;      /* Keep Price text bottom-aligned */
+		padding-left:   0.2em;
+	}
+	
+/* END: For the Leader Dot */
+
+
+@media (max-width: 450px) {
+	.filling {
+		padding-left: 0;
+		margin-left: -33px
+	}
+	.angus .menuItemContent > p img {
+		max-width: 250px;
+	}
+}
+
+@media (max-width: 370px) {
+	.filling table p img,
+	.angus table p img {
+		max-width: 120px;
+	}
+}
+
+
+.alsoBeer {
+	text-align: center;
+}
+
+@media (max-width: 1199px) {
+	#enchiladas .col-md-7 {
+		width: 68.3%;
+	}
+}
+@media (max-width: 991px) {
+	#enchiladas .col-md-7 {
+		width: 100%;
+	}
+	.alsoBeer img {
+		max-width: 318px;
+	}
+	.alsoBeer {
+		text-align: left;
+	}
+}
+
+@media (max-width: 450px) {
+	.alsoBeer img {
+		max-width: 100%;
+	}
+}
+
+#consumerHealth {
+	margin-top: 30px;
+	text-align: center;
+	font-family: arial;
+	font-weight: 800;
+}
+#consumerHealth p {
+	font-size: .8em;
+}
+
+
+
+
+
+
