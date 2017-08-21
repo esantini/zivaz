@@ -496,6 +496,21 @@ h1, h2, h3 {
 	width: 60%;
 }
 
+.menuDishImgBorder {
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	max-height: 110px;
+}
+.menuDishImg {
+	position: relative;
+}
+#salmonDishImg {
+	max-width: 130%;
+	left: -11%;
+	margin-top: -22%;
+}
+
 .menuItemTitle {
 	margin-top: 15px;
 	font-family: "menuItemTitle";
