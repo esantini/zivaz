@@ -491,6 +491,10 @@ h1, h2, h3 {
 	font-size: 15px !important;
 	margin-left: 20px;
 }
+.categoryIntro {
+	margin: 0 16%;
+	width: 60%;
+}
 
 .menuItemTitle {
 	margin-top: 15px;
