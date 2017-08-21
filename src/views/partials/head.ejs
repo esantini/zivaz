@@ -8,13 +8,14 @@
 <link rel="stylesheet" type="text/css" href="resources/css/header.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/mainf9e3.css?v=1.1" />
 <link rel="stylesheet" type="text/css" href="resources/css/custom83a7.css?v=1.9" />
+<link rel="stylesheet" type="text/css" href='resources/css/bpopup.css'>
 
 <link rel="shortcut icon" href="resources/images/favicon.ico">
-
 <script src="resources/js/jquery-1.11.0.min.js"></script>
 <script src="resources/js/main.min.js"></script>
 
-<link rel="stylesheet" href="resources/css/nivo-slider.css" type="text/css" />
-<link rel="stylesheet" href="resources/css/NivoSliderThemes/bar/bar.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href='resources/css/bpopup.css'>
-<link rel="stylesheet" type="text/css" href='resources/css/homeffaf.css?v=1.4'>
+<% if ( page === "home" ) { %>
+	<link rel="stylesheet" href="resources/css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="resources/css/NivoSliderThemes/bar/bar.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href='resources/css/homeffaf.css?v=1.4'>
+<% } %>
