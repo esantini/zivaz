@@ -500,10 +500,11 @@ h1, h2, h3 {
 	max-width: 100%;
 	overflow: hidden;
 	position: relative;
-	max-height: 110px;
+	max-height: 94px;
 }
 .menuDishImg {
 	position: relative;
+	cursor: pointer;
 }
 #salmonDishImg {
 	max-width: 130%;
