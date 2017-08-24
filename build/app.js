@@ -3,7 +3,7 @@ var express = require("express");
 var path = require("path");
 var app = express();
 // Get port from environment and store in Express.
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

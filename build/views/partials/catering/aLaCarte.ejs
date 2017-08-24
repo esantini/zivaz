@@ -1,305 +1,45 @@
-<div class="menuCategory" id="signEntrees">
+<div class="menuCategory" id="aLaCarte">
 	<span class="categoryTitle">
 					
 
-			<div id="hidemenuContentSEBtn" style="display:none;" onclick="hidemenuContentSE();" class="showHideLink" >
+			<div id="hidemenuContentALCBtn" style="display:none;" onclick="hidemenuContentALC();" class="showHideLink" >
 				<h2 style="display:inline-block;">
 					<img alt="" src="resources/images/menuArrowDown.png" style="max-width:20px; height:auto;" />
-					<label>SIGNATURE ENTREES</label>
+					<label>A LA CARTE</label>
 				</h2>
 			</div>
 
-			<div id="showmenuContentSEBtn" style="display:inline-block;" onclick="showmenuContentSE();" class="showHideLink">
+			<div id="showmenuContentALCBtn" style="display:inline-block;" onclick="showmenuContentALC();" class="showHideLink">
 				<h2>
 					<img alt="" src="resources/images/menuArrowRight.png" style="max-height:25px; width:auto; padding-bottom: 5px;" />
-					<label>SIGNATURE ENTREES</label>
+					<label>A LA CARTE</label>
 				</h2>
 			</div>
 
 			<br>
 
 			<script type="text/javascript">
-				function showmenuContentSE() {
-					$('#menuContentSE').show(200);
-					$('#hidemenuContentSEBtn').css('display', 'inline-block');
-					$('#showmenuContentSEBtn').css('display', 'none');
+				function showmenuContentALC() {
+					$('#menuContentALC').show(200);
+					$('#hidemenuContentALCBtn').css('display', 'inline-block');
+					$('#showmenuContentALCBtn').css('display', 'none');
 				};
-				function hidemenuContentSE() {
-					$('#menuContentSE').hide(200);
-					$('#hidemenuContentSEBtn').css('display', 'none');
-					$('#showmenuContentSEBtn').css('display', 'inline-block');
+				function hidemenuContentALC() {
+					$('#menuContentALC').hide(200);
+					$('#hidemenuContentALCBtn').css('display', 'none');
+					$('#showmenuContentALCBtn').css('display', 'inline-block');
 				};
 			</script>
 		</span>
 	<div>
 	</div>
 
-	<div class="menuContent" id="menuContentSE">
-
-		<br>
-
-		<p class="categoryIntro"> 
-			All signature entrees are served with rice, beans (black or pinto), tortillas, chips & salsa.
-		</p>
-		<p class="categoryIntro" style="color: #f7d96d;">
-			Minimum 10 orders per entree
-		</p>
-		<p class="categoryIntro">
-			<strong>PRICE PER SERVING</strong>
-		</p>
+	<div class="menuContent" id="menuContentALC">
 
 		<br />
 
 		<div class="row">
 			<div class="col-md-6">
-
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Fajitas
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<p>
-							Sauteed red bell & poblano peppers/onion
-						</p>
-						<p>
-							<ul>
-								<li>
-									<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
-										<tbody>
-											<tr>
-												<td>Chicken</td>
-												<td>9.95</td>
-											</tr>
-											<tr>
-												<td>Steak</td>
-												<td>10.95</td>
-											</tr>
-											<tr>
-												<td>Chicken/Steak(again?)/Shrimp</td>
-												<td>13.95</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<p> </p>
-								</li>
-							</ul>
-						</p>
-
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class='col-md-6'>
-
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Salmon Asado
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<ul>
-							<li>
-								<table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
-									<tbody>
-										<tr>
-											<td>Achiote marinated salmon filet</td>
-											<td>14.95</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-
-						<div class="menuDishImgBorder" >
-							<img id="salmonDishImg" onclick="showIFrame('resources/images/dishes/salmon2.jpg')" class="menuDishImg" src="resources/images/dishes/salmon2.jpg" />
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-		<div class='row'>
-
-			<div class='col-md-6'>
-
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Pollo Rajas
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<ul>
-							<li>
-								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
-									<tbody>
-										<tr>
-											<td>
-												Grilled chicken in green poblano sauce with cheese & veggies
-											</td>
-											<td>9.95</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class='col-md-6'>
-
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Pollo con Calabazas
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<ul>
-							<li>
-								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
-									<tbody>
-										<tr>
-											<td>Grilled chicken with zucchini, veggies and red tomato sauce</td>
-											<td>9.95</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-
-						</ul>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-		<div class='row'>
-
-			<div class='col-md-6'>
-
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Pollo Pasilla
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<ul>
-							<li>
-								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
-									<tbody>
-
-										<tr>
-											<td>Chile ancho sauce, mushrooms and cheese</td>
-											<td>9.95</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class='col-md-6'>
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Pollo Chipotle
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<ul>
-							<li>
-								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
-									<tbody>
-
-										<tr>
-											<td>Mushrooms, cheese and chipotle sauce</td>
-											<td>9.95</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-		<div class='row'>
-
-			<div class='col-md-6'>
 
 				<div class="menuItem">
 
@@ -320,16 +60,269 @@
 						<p>
 							Choice of poblano, mole, chipotle, ancho chile or red sauce.
 						</p>
-						<p style="color: #f7d96d" >
-							2 enchiladas per serving
+						<p>
+							Chicken / Cheese / Veggie
 						</p>
 						<ul>
 							<li>
 								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
 									<tbody>
 										<tr>
-											<td>Chicken/Cheese/Veggie</td>
-											<td>9.95</td>
+											<td>Per Dozen</td>
+											<td>36</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class='col-md-6'>
+
+				<div class="menuItem">
+
+					<div class="menuItemTitleDiv">
+
+						<h3 style="display:inline-block">
+							<label class="menuItemTitle">
+								Chicken Flautas
+							</label>
+						</h3>
+
+						<div style="margin-top: -10px;">
+							<img src="resources/images/menuItemSeparator.png" />
+						</div>
+					</div>
+
+					<div class="menuItemSummary">
+						<p>
+							Crispy corn tortillas taquito.
+						</p>
+						<ul>
+							<li>
+								<table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+									<tbody>
+										<tr>
+											<td>Per Dozen</td>
+											<td>18</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+
+						<div class="menuDishImgBorder" >
+							<img id="salmonDishImgTODOCHANGE" onclick="showIFrame('resources/images/dishes/salmon2.jpg')" class="menuDishImg" src="resources/images/dishes/salmon2.jpg" />
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class='row'>
+
+			<div class='col-md-6'>
+
+				<div class="menuItem">
+
+					<div class="menuItemTitleDiv">
+
+						<h3 style="display:inline-block">
+							<label class="menuItemTitle">
+								Salmon Asado
+							</label>
+						</h3>
+
+						<div style="margin-top: -10px;">
+							<img src="resources/images/menuItemSeparator.png" />
+						</div>
+					</div>
+
+					<div class="menuItemSummary">
+						<p>
+							Achiote marinated salmon filet
+						</p>
+						<ul>
+							<li>
+								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+									<tbody>
+										<tr>
+											<td>
+												Per Serving
+											</td>
+											<td>12.95</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class='col-md-6'>
+
+				<div class="menuItem">
+
+					<div class="menuItemTitleDiv">
+
+						<h3 style="display:inline-block">
+							<label class="menuItemTitle">
+								Chilaquiles
+							</label>
+						</h3>
+
+						<div style="margin-top: -10px;">
+							<img src="resources/images/menuItemSeparator.png" />
+						</div>
+					</div>
+
+					<div class="menuItemSummary">
+						<p>
+							Corn tortillas Mexican lasagna casserole
+						</p>
+						<ul>
+							<li>
+								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+									<tbody>
+										<tr>
+											<td>10 Servings</td>
+											<td>28</td>
+										</tr>
+										<tr>
+											<td>20 Servings</td>
+											<td>55</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class='row'>
+
+			<div class='col-md-6'>
+
+				<div class="menuItem">
+
+					<div class="menuItemTitleDiv">
+
+						<h3 style="display:inline-block">
+							<label class="menuItemTitle">
+								Calabacitas
+							</label>
+						</h3>
+
+						<div style="margin-top: -10px;">
+							<img src="resources/images/menuItemSeparator.png" />
+						</div>
+					</div>
+
+					<div class="menuItemSummary">
+						<p>
+							Diced zucchini with veggies, cheese and tomato sauce 
+						</p>
+						<ul>
+							<li>
+								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+									<tbody>
+
+										<tr>
+											<td>Per tray</td>
+											<td>40</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class='col-md-6'>
+				<div class="menuItem">
+
+					<div class="menuItemTitleDiv">
+
+						<h3 style="display:inline-block">
+							<label class="menuItemTitle">
+								Poblano Salad
+							</label>
+						</h3>
+
+						<div style="margin-top: -10px;">
+							<img src="resources/images/menuItemSeparator.png" />
+						</div>
+					</div>
+
+					<div class="menuItemSummary">
+						Mixed greens / Grilled peppers/ roasted corn / cucumber / sweet pecans. Dressing
+						<ul>
+							<li>
+								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+									<tbody>
+										<tr>
+											<td>10 Servings</td>
+											<td>15</td>
+										</tr>
+										<tr>
+											<td>20 Servings</td>
+											<td>30</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class='row'>
+
+			<div class='col-md-6'>
+
+				<div class="menuItem">
+
+					<div class="menuItemTitleDiv">
+
+						<h3 style="display:inline-block">
+							<label class="menuItemTitle">
+								Churro Relleno
+							</label>
+						</h3>
+
+						<div style="margin-top: -10px;">
+							<img src="resources/images/menuItemSeparator.png" />
+						</div>
+					</div>
+
+					<div class="menuItemSummary">
+						<p>
+							Dessert cinnamon churro mini sticks
+						</p>
+						<ul>
+							<li>
+								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+									<tbody>
+										<tr>
+											<td>Per dozen</td>
+											<td>12</td>
 										</tr>
 									</tbody>
 								</table>
@@ -346,7 +339,7 @@
 
 						<h3 style="display:inline-block">
 							<label class="menuItemTitle">
-								Puntas Zivaz
+								Burritos
 							</label>
 						</h3>
 
@@ -366,22 +359,32 @@
 					</div>
 
 					<div class="menuItemSummary">
+						<p>
+							Rice, beans, lettuce, pico de galo and sour cream.
+						</p>
+						<p style="color: #f7d96d" >
+							Prices per dozen burritos.
+						</p>
 						<ul>
 							<li>
 								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
 									<tbody>
-
 										<tr>
-											<td>Beef tender strips in chile chipotle sauce</td>
-											<td>14.95</td>
+											<td>Flour or wheat, chicken / veggies</td>
+											<td>99</td>
+										</tr>
+										<tr>
+											<td>Steak</td>
+											<td>120</td>
 										</tr>
 									</tbody>
 								</table>
 							</li>
 						</ul>
+						
 
 						<div class="menuDishImgBorder" >
-							<img id="salmonDishImg" class="menuDishImg"
+							<img id="salmonDishImgTODOCHANGE" class="menuDishImg"
 								onclick="showIFrame('resources/images/dishes/puntas_probably.jpg')"
 								src="resources/images/dishes/puntas_probably.jpg" />
 						</div>
@@ -390,43 +393,6 @@
 
 			</div>
 
-		</div>
-
-		<div class='row'>
-
-			<div class='col-md-6'>
-				<div class="menuItem">
-
-					<div class="menuItemTitleDiv">
-
-						<h3 style="display:inline-block">
-							<label class="menuItemTitle">
-								Carnitas
-							</label>
-						</h3>
-
-						<div style="margin-top: -10px;">
-							<img src="resources/images/menuItemSeparator.png" />
-						</div>
-					</div>
-
-					<div class="menuItemSummary">
-						<ul>
-							<li>
-								<table border="0" cellpadding="1" cellspacing="1" style="width:100%">
-									<tbody>
-
-										<tr>
-											<td>Slow-cooked marinated pork, tomatillo or mole sauce</td>
-											<td>10.95</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
