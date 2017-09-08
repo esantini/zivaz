@@ -45,7 +45,7 @@ app.use(function (err, req, res, next) {
     res.render('error', { page: "error", error: err.message });
 });
 app.listen(port);
-console.log("TADAA ! ! ! \n");
+console.log("\nListening on port: " + port);
 // import * as httpLib from 'http';
 // /**
 //  * Create HTTP server.

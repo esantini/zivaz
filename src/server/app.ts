@@ -61,7 +61,8 @@ app.use(function(err: myError, req:express.Request, res:express.Response, next: 
 });
 
 app.listen(port);
-console.log("TADAA ! ! ! \n");
+console.log("\nListening on port: " + port);
+
 
 // import * as httpLib from 'http';
 // /**
