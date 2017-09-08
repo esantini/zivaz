@@ -100,7 +100,7 @@ h1, h2, h3 {
 	height: 45px;
     position: relative;
     top: 50px;
-    left: 300px;
+    left: 275px;
 	
 }
 
@@ -175,6 +175,13 @@ h1, h2, h3 {
 	#headerLogo {
 		width: 240px;
 	}
+	
+}
+
+@media (max-width: 991px ) and ( min-width: 721px) {
+	#headerRandomImage {
+		display: none;
+	}
 }
 
 @media (max-width: 767px) {
@@ -190,7 +197,7 @@ h1, h2, h3 {
 		top: 120px;
 	}
 }
-@media (max-width: 450px) {
+@media (max-width: 650px) {
 	
 	#headerRandomImage{
 		max-height: 120px;
