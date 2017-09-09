@@ -31,15 +31,15 @@
 		<div class="ribbon"></div>
 		<div id="slider" class="nivoSlider">
 
-			<img src="resources/images/winners/01_zivaz_burger.jpg" alt="" title="" />
+			<% if (imgs) { %>
+				<% for (var i = 0; i < imgs.length; i++ ) { %>
 
-			<img src="resources/images/winners/02_zivaz_burger.jpg" alt="" title="" />
+					<img src="resources/images/<%= dir + '/' + imgs[i].file %>"
+						alt="<%= imgs[i].alt %>"
+						title="<%= imgs[i].title %>" />
 
-			<img src="resources/images/winners/03_zivaz_pork_belly_blue.jpg" alt="" title="Pork Belly Tacos" />
-
-			<img src="resources/images/winners/04_zivaz_burrito.jpg" alt="" title="" />
-
-			<img src="resources/images/winners/05_zivaz_Burrito_Madness_Champion.png" alt="" title="" />
+				<% } %>
+			<% } %>
 
 		</div>
 	</div>

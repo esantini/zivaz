@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
+import { galleries } from "./constants";
 
 var app = express();
 
@@ -39,8 +40,8 @@ app.use('/catering$', function(req: express.Request, res: express.Response, next
 
 app.use("/imgGallery", function(req: express.Request, res: express.Response, next: express.NextFunction) {
 	console.log("\nServing: imgGallery");
-	res.render("imgGallery", { imgs: [] });	
-})
+	res.render("imgGallery", { imgs: galleries[req.query.dir], dir: req.query.dir });
+});
 
 interface myError extends Error {
 	status?: any;
@@ -67,7 +68,6 @@ app.use(function(err: myError, req:express.Request, res:express.Response, next: 
 
 app.listen(port);
 console.log("\nListening on port: " + port);
-
 
 // import * as httpLib from 'http';
 // /**

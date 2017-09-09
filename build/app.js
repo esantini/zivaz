@@ -1,6 +1,7 @@
 "use strict";
 var express = require("express");
 var path = require("path");
+var constants_1 = require("./constants");
 var app = express();
 // Get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || '4000');
@@ -30,7 +31,7 @@ app.use('/catering$', function (req, res, next) {
 });
 app.use("/imgGallery", function (req, res, next) {
     console.log("\nServing: imgGallery");
-    res.render("imgGallery", { imgs: [] });
+    res.render("imgGallery", { imgs: constants_1.galleries[req.query.dir], dir: req.query.dir });
 });
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
