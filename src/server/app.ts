@@ -37,6 +37,11 @@ app.use('/catering$', function(req: express.Request, res: express.Response, next
 	res.render('index', { page: "catering" });
 });
 
+app.use("/imgGallery", function(req: express.Request, res: express.Response, next: express.NextFunction) {
+	console.log("\nServing: imgGallery");
+	res.render("imgGallery", { imgs: [] });	
+})
+
 interface myError extends Error {
 	status?: any;
 }
