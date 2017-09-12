@@ -13,8 +13,14 @@
 			</p>
 		</div>
 
-		<img id="headerRandomImage" src="headerRandomImage28803.png?id=7" />
-
+		<img id="headerRandomImage" src="" />
+		<script>
+			(function() {
+				const imgFile = "headerRandom" +
+					Math.floor(Math.random() * 4) + ".png";
+				document.getElementById("headerRandomImage").setAttribute("src", imgFile );
+			})();
+		</script>
 	</div>
 
 </nav>
