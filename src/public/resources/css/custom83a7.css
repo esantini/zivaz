@@ -48,37 +48,33 @@
 
 html, body {
 
-	background: url(../images/background.png) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-color: #2A2524;
-
 	font-family: "mainFontRegular", Helvetica, sans-serif ;
 	font-size: 18px;
 	color: white;
 }
 
-/* #backgroundImg {
+/* Main background Image */
+img.bg {
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 1280px; /* Specific to this particular image */
+		
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+		
+	/* Set up positioning */
 	position: fixed;
-	width: 120%;
-	height: 120%;
-	z-index: -1;
-	background: url(../images/background.png);
-    -webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	background-color: black;
-} */
+	top: 0;
+	left: 0;
+}
 
-/*
-h1, h2, h3 {
-	font-weight: bold;
-}*/
+@media screen and (max-width: 1280px) { /* Specific to this particular image */
+	img.bg {
+		left: 50%;
+		margin-left: -640px;   /* 50% */
+	}
+}
 
 #header {
 	
