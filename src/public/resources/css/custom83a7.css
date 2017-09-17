@@ -45,6 +45,14 @@
        url('fonts/Bitter-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('fonts/Bitter-BoldItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+body {
+	background: url(../images/background.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: black;
+}
 
 html, body {
 	height: 100%;
