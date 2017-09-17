@@ -45,14 +45,6 @@
        url('fonts/Bitter-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('fonts/Bitter-BoldItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
-body {
-	background: url(../images/background.png) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-color: black;
-}
 
 html, body {
 	height: 100%;
@@ -61,29 +53,18 @@ html, body {
 	font-family: "mainFontRegular", Helvetica, sans-serif ;
 	font-size: 18px;
 	color: white;
+	background-color: #272121;
 }
 
 /* Main background Image */
-img.bg {
-	/* Set rules to fill background */
+/* Not using body's or html's background-image becuase image moves around on mobile browsers. */
+img.bg, .bgCover {
 	min-height: 100%;
-	min-width: 1280px; /* Specific to this particular image */
-		
-	/* Set up proportionate scaling */
-	width: 100%;
-	height: auto;
-		
-	/* Set up positioning */
+	min-width: 100%;
+	
 	position: fixed;
 	top: 0;
 	left: 0;
-}
-
-@media screen and (max-width: 1280px) { /* Specific to this particular image */
-	img.bg {
-		left: 50%;
-		margin-left: -640px;   /* 50% */
-	}
 }
 
 #header {
