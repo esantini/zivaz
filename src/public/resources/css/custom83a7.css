@@ -46,7 +46,17 @@
        url('fonts/Bitter-BoldItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-body {
+html, body {
+	font-family: "mainFontRegular", Helvetica, sans-serif ;
+	font-size: 18px;
+	color: white;
+}
+
+#backgroundImg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 	background: url(../images/background.png);
     -webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -54,14 +64,7 @@ body {
 	background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: black;
-}
-html, body {
-    
-	font-family: "mainFontRegular", Helvetica, sans-serif ;
-	font-size: 18px;
-	color: white;
-	
+	background-color: black;
 }
 
 /*
