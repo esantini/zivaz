@@ -2,7 +2,10 @@ import * as express from 'express';
 import * as path from 'path';
 import { galleries } from "./constants";
 
+const compress = require("compression");
+
 var app = express();
+app.use(compress());
 
 // Get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || '4000');
