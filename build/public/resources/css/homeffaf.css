@@ -1,160 +1,34 @@
-/* Banners  Begin */
-	.grid {
-		max-width: 220px;
-		margin: 0 auto;
-	}
-	.grid a {
-		cursor: pointer;
-		cursor: hand;
-		margin: auto;
-	}
-	
-	.grid figure {
-		position: relative;
-		overflow: hidden;
-		margin: 5px;
-		background: #333;
-		max-width: 220px;
-	}
-	
-	.grid figure img {
-		position: relative;
-		display: block;
-		width: 100%;
-	}
-	.grid .opaque {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: black;
-		opacity: 0.3;
-		transition: opacity 0.3s;
-		z-index: 9;
-	}
-	
-	.grid figcaption {
-		position: absolute;
-		top: 0;
-		z-index: 11;
-		padding: 10px;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-	}
-	
-	.grid figcaption h2 {
-		margin: 0 0 20px 0;
-		color: black;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-weight: 300;
-		font-size: 130%;
-		transform: translateY(50px);
-		transition: transform 0.3s;
-	}
-	#bannerWinner .grid figcaption h2 {
-		margin: 0 0 -14px 0;
-		transform: translateY(23px);
-	}
-	#bannerRestaurant .grid figcaption h2 {
-		
-	}
-	
-	.grid figcaption p {
-		padding: 0 20px;
-		color: #250900;
-		font-weight: 300;
-		transform: translateY(50px);
-		transition: opacity 0.3s, transform 0.3s;
-	}
-	
-	.grid figure button {
-		position: absolute;
-		padding: 4px 20px;
-		border: none;
-		text-transform: uppercase;
-		text-shadow: 0px 0px 2px black, 0px 0px 3px black;
-		letter-spacing: 1px;
-		font-weight: bold;
-		transition: opacity 0.3s, transform 0.3s;
-	}
-	
-	.grid figcaption,
-	.grid figcaption h2,
-	.grid figcaption p,
-	.grid figure button {
-		backface-visibility: hidden;
-	}
-	
-	.grid svg {
-		position: absolute;
-		top: -1px; /* fixes rendering issue in FF */
-		z-index: 10;
-		width: 100%;
-		height: 100%;
-	}
-	
-	.grid svg path {
-		fill: rgba(255, 234, 213, .9);
-	}
-	
-	.grid a:hover figure .opaque {
-		opacity: 0;
-	}
-	.grid a:hover figcaption h2,
-	.grid a:hover figcaption p,
-	#bannerWinner .grid a:hover figcaption h2,
-	#bannerWinner .grid a:hover figcaption p,
-	#bannerRestaurant .grid a:hover figcaption h2,
-	#bannerRestaurant .grid a:hover figcaption p {
-		transform: translateY(0);
-	}
-	.grid a:hover figcaption p {
-		opacity: 0;
-	}
-	
-	
-	
-	.grid figure button {
-		top: 50%;
-		left: 50%;
-		border: 3px solid #fff;
-		background: transparent;
-		color: #fff;
-		opacity: 0;
-		transform: translateY(-50%) translateX(-50%) scale(0.25);
-	}
-	.grid a:hover figure button {
-		opacity: 1;
-		transform: translateY(-50%) translateX(-50%) scale(1);
-	}
-	
-	#banners .col-sm-4 {
-		margin-top: 50px;
-		margin-bottom: 50px;
-	}
-
-	.bannerLinks {
-		position: absolute;
-		max-width: 220px;
-		background-color: rgba(0, 0, 0, .6);
-		text-align: center;
-		z-index: 99;
-		width: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		margin: -125px auto 0px;
-		text-decoration: underline;
-	}
-	.bannerLinks .bannerLink {
-		text-shadow: 0px 0px 3px black,
-					 0px 0px 3px black,
-					 0px 0px 3px black,
-					 0px 0px 3px black;
-	}
-	.bannerLinks a.bannerLink:hover {
-		color: rgb(232, 171, 109) !important;
-	}
-
-/* Banners  End */
-
+.grid{max-width:220px;margin:0 auto;}
+.grid a{cursor:pointer;cursor:hand;margin:auto;}
+.grid figure{position:relative;overflow:hidden;margin:5px;background:#333;max-width:220px;}
+.grid figure img{position:relative;display:block;width:100%;}
+.grid .opaque{position:absolute;width:100%;height:100%;background-color:black;opacity:0.3;transition:opacity 0.3s;z-index:9;}
+.grid figcaption{position:absolute;top:0;z-index:11;padding:10px;width:100%;height:100%;text-align:center;}
+.grid figcaption h2{margin:0 0 20px 0;color:black;text-transform:uppercase;letter-spacing:1px;font-weight:300;font-size:130%;transform:translateY(50px);transition:transform 0.3s;}
+#bannerWinner .grid figcaption h2{margin:0 0 -14px 0;transform:translateY(23px);}
+#bannerRestaurant .grid figcaption h2{}
+.grid figcaption p{padding:0 20px;color:#250900;font-weight:300;transform:translateY(50px);transition:opacity 0.3s, transform 0.3s;}
+.grid figure button{position:absolute;padding:4px 20px;border:none;text-transform:uppercase;text-shadow:0px 0px 2px black, 0px 0px 3px black;letter-spacing:1px;font-weight:bold;transition:opacity 0.3s, transform 0.3s;}
+.grid figcaption,
+.grid figcaption h2,
+.grid figcaption p,
+.grid figure button{backface-visibility:hidden;}
+.grid svg{position:absolute;top:-1px;z-index:10;width:100%;height:100%;}
+.grid svg path{fill:rgba(255, 234, 213, .9);}
+.grid a:hover figure .opaque{opacity:0;}
+.grid a:hover figcaption h2,
+.grid a:hover figcaption p,
+#bannerWinner .grid a:hover figcaption h2,
+#bannerWinner .grid a:hover figcaption p,
+#bannerRestaurant .grid a:hover figcaption h2,
+#bannerRestaurant .grid a:hover figcaption p{transform:translateY(0);}
+.grid a:hover figcaption p{opacity:0;}
+.grid figure button{top:50%;left:50%;border:3px solid #fff;background:transparent;color:#fff;opacity:0;transform:translateY(-50%) translateX(-50%) scale(0.25);}
+.grid a:hover figure button{opacity:1;transform:translateY(-50%) translateX(-50%) scale(1);}
+#banners .col-sm-4{margin-top:50px;margin-bottom:50px;}
+.bannerLinks{position:absolute;max-width:220px;background-color:rgba(0, 0, 0, .6);text-align:center;z-index:99;width:100%;left:50%;transform:translateX(-50%);margin:-125px auto 0px;text-decoration:underline;}
+.bannerLinks .bannerLink{text-shadow:0px 0px 3px black,
+0px 0px 3px black,
+0px 0px 3px black,
+0px 0px 3px black;}
+.bannerLinks a.bannerLink:hover{color:rgb(232, 171, 109) !important;}
