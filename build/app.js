@@ -3,8 +3,18 @@ var express = require("express");
 var path = require("path");
 var constants_1 = require("./constants");
 var compress = require("compression");
+var minify = require("express-minify-html");
 var app = express();
 app.use(compress());
+app.use(minify({
+    override: true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeEmptyAttributes: true
+    }
+}));
 // Get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);

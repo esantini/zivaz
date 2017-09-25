@@ -3,9 +3,19 @@ import * as path from 'path';
 import { galleries } from "./constants";
 
 const compress = require("compression");
+const minify = require("express-minify-html");
 
 var app = express();
 app.use(compress());
+app.use(minify({
+    override:      true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments:            true,
+        collapseWhitespace:        true,
+        removeEmptyAttributes:     true
+    }
+}));
 
 // Get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || '4000');
