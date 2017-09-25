@@ -1,4 +1,6 @@
 
+http://34.214.203.37/
+
 ### How to Heroku:
 `git clone (repo)`
 
