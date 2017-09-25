@@ -10,6 +10,7 @@ import * as less from 'gulp-less';
 import * as concat from "gulp-concat";
 import * as rename from 'gulp-rename';
 import * as path from 'path';
+import * as uglify from "gulp-uglify";
 
 //
 interface TaskToWatch {
@@ -69,6 +70,7 @@ wachAll.push(watchTask);
 			.pipe(sourcemaps.init())
 				.pipe(tsProject2())
 				.pipe(concat('main.min.js'))
+				.pipe(uglify())
 			.pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest( dest + 'public/resources/js' ));
 	});
