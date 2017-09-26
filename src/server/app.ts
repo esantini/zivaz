@@ -13,7 +13,8 @@ app.use(minify({
     htmlMinifier: {
         removeComments:            true,
         collapseWhitespace:        true,
-        removeEmptyAttributes:     true
+        removeEmptyAttributes:     true,
+        minifyJS:                  true
     }
 }));
 
