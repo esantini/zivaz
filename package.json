@@ -5,6 +5,7 @@
   "main": "build/app.js",
   "scripts": {
     "start": "nodemon build/app.js --watch build/app.js",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "@types/gulp-util": "^3.0.31",
     "@types/jquery": "^3.2.11",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-less": "^3.3.2",
     "gulp-rename": "^1.2.2",

@@ -12,6 +12,8 @@ import * as rename from 'gulp-rename';
 import * as path from 'path';
 import * as uglify from "gulp-uglify";
 
+var cleanCss = require("gulp-clean-css");
+
 //
 interface TaskToWatch {
 	taskName: string,
@@ -94,6 +96,7 @@ wachAll.push(watchTask);
 			.pipe(less({
 				paths: [ path.join(__dirname, 'less', 'includes')]
 			}).on('error', gUtil.log))
+			.pipe(cleanCss())
 			.pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest( dest ));
 	});
@@ -105,7 +108,7 @@ wachAll.push(watchTask);
 
 watchTask = {
 	taskName: "move_plain_files",
-	src: ['src/public/**/*', '!src/**/*.ts', '!src/**/*.less'],
+	src: ['src/public/**/*', '!src/**/*.ts', '!src/**/*.less', '!src/**/*.css'],
 	dest: 'build/public/'
 };
 wachAll.push(watchTask);
@@ -113,6 +116,25 @@ wachAll.push(watchTask);
 	
 	gulp.task(name, function() {
 		gulp.src(src)
+			.pipe(gulp.dest(dest));
+	});
+
+})(watchTask.taskName, watchTask.src, watchTask.dest);
+
+//
+//
+
+watchTask = {
+	taskName: "minify_css",
+	src: ['src/public/**/*.css'],
+	dest: 'build/public/'
+};
+wachAll.push(watchTask);
+(function(name: string, src: string | string[], dest: string) {
+	
+	gulp.task(name, function() {
+		gulp.src(src)
+			.pipe(cleanCss())
 			.pipe(gulp.dest(dest));
 	});
 
